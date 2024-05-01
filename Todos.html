@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodosList Application</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .bg-container{
+            max-width:800px;
+            margin: auto;
+            background-color: lightskyblue;
+            margin-top: 90px;
+            padding: 50px;
+            border-radius: 15px;
+        }
+        .todos-heading{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration: underline;
+            font-size:60px;
+        }
+        .UserInput-label{
+            background-color: white;
+            width: 100%;
+            border-style: solid;
+            border-width: 1px;
+            border-color: #e4e7eb;
+            border-radius: 10px;
+            margin-top: 10px;
+            padding: 15px;
+            font-size: 25px
+        }
+
+
+        .items-list{
+            margin-top: 15px;
+        }
+        .item-checkbox{
+           width: 30px;
+           height: 30px;
+           margin-top:8px;
+           margin-right:8px;
+        }
+       
+        .labels{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            margin-top:10px;
+            font-size: 25px;
+            background-color: #e6f6ff;
+            width: 100%;
+            border-style: solid;
+            border-width: 10px;
+            border-color: #096f92;
+            border-top: none;
+            border-bottom: none;
+            border-radius: 0 18px;
+            padding-left: 15px;
+            padding-right: 5px;
+            cursor:pointer;
+        }
+        input[type=checkbox ]:checked + .labels{
+            text-decoration: line-through;
+            color:green;
+
+    } 
+  
+   
+    </style>
+</head>
+<body>
+    <div class="bg-container">
+        <div class="heading-section">
+         
+              <h1 class="todos-heading">Todos-List</h1>
+              <h1 class="create-task-heading">CreateTask</h1>
+              <div class=" Enter-task-label">
+                <input type="text" id="todoUserInput" class="UserInput-label" placeholder="What need to be done?">
+                <br><br>
+                <button class="btn btn-primary" id="add-btn-Id" type="button">Add</button><br><br>
+              </div>
+              <h1 class="todo-items-heading">My Tasks</h1>
+            <ul class="items-list " id="items-listid"> 
+                
+            </ul>
+         
+        </div>
+      </div>
+    <script src="todos.js"></script>
+</body>
+</html>
